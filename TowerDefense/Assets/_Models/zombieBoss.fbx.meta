@@ -13,12 +13,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: pumpkinHulk_diffuse
-    second: {fileID: 2800000, guid: 95cf7ac029b8d06498173db6544b1e5c, type: 3}
+    second: {fileID: 2800000, guid: 5f193938e6aec894d9cba347db9c64fc, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: pumpkinHulk_normal
-    second: {fileID: 2800000, guid: 57b1879ad31a027478611f541ba8fd31, type: 3}
+    second: {fileID: 2800000, guid: d23c942e6ce533d4fa457904dd41a343, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
