@@ -798,21 +798,21 @@ namespace UnityEngine.InputSystem
         },
         {
             ""name"": ""Toques"",
-            ""id"": ""2d05efd3-7e39-41f6-ae35-400d1842d181"",
+            ""id"": ""450244bd-2efb-41b1-bc3c-0a81f018453e"",
             ""actions"": [
                 {
                     ""name"": ""Toque"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""1030a7dc-6584-4e4a-afeb-dc12a378de6a"",
+                    ""id"": ""e9074791-3e4d-4ca9-92d7-9ceda56eca38"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""PositionToque"",
+                    ""name"": ""PosicionToque"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""d8136e1e-4b0b-4746-b89f-0ac48206a3a5"",
+                    ""id"": ""113e17e7-fd38-4a0e-a330-e9cfbd97ea6e"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -822,7 +822,7 @@ namespace UnityEngine.InputSystem
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""dbd40e28-bf5c-446f-9878-0343ef0f6fd2"",
+                    ""id"": ""f96ed270-55c1-48f8-b28c-7561360ea8e7"",
                     ""path"": ""<Touchscreen>/Press"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
@@ -833,12 +833,12 @@ namespace UnityEngine.InputSystem
                 },
                 {
                     ""name"": """",
-                    ""id"": ""35773ce9-f8a9-487a-a537-8e71a7fbfc22"",
+                    ""id"": ""086b496b-a61d-4387-9a99-97927118d155"",
                     ""path"": ""<Touchscreen>/position"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Touch"",
-                    ""action"": ""PositionToque"",
+                    ""action"": ""PosicionToque"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -928,7 +928,7 @@ namespace UnityEngine.InputSystem
             // Toques
             m_Toques = asset.FindActionMap("Toques", throwIfNotFound: true);
             m_Toques_Toque = m_Toques.FindAction("Toque", throwIfNotFound: true);
-            m_Toques_PositionToque = m_Toques.FindAction("PositionToque", throwIfNotFound: true);
+            m_Toques_PosicionToque = m_Toques.FindAction("PosicionToque", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -1171,13 +1171,13 @@ namespace UnityEngine.InputSystem
         private readonly InputActionMap m_Toques;
         private List<IToquesActions> m_ToquesActionsCallbackInterfaces = new List<IToquesActions>();
         private readonly InputAction m_Toques_Toque;
-        private readonly InputAction m_Toques_PositionToque;
+        private readonly InputAction m_Toques_PosicionToque;
         public struct ToquesActions
         {
             private @ProtoInputActions m_Wrapper;
             public ToquesActions(@ProtoInputActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @Toque => m_Wrapper.m_Toques_Toque;
-            public InputAction @PositionToque => m_Wrapper.m_Toques_PositionToque;
+            public InputAction @PosicionToque => m_Wrapper.m_Toques_PosicionToque;
             public InputActionMap Get() { return m_Wrapper.m_Toques; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -1190,9 +1190,9 @@ namespace UnityEngine.InputSystem
                 @Toque.started += instance.OnToque;
                 @Toque.performed += instance.OnToque;
                 @Toque.canceled += instance.OnToque;
-                @PositionToque.started += instance.OnPositionToque;
-                @PositionToque.performed += instance.OnPositionToque;
-                @PositionToque.canceled += instance.OnPositionToque;
+                @PosicionToque.started += instance.OnPosicionToque;
+                @PosicionToque.performed += instance.OnPosicionToque;
+                @PosicionToque.canceled += instance.OnPosicionToque;
             }
 
             private void UnregisterCallbacks(IToquesActions instance)
@@ -1200,9 +1200,9 @@ namespace UnityEngine.InputSystem
                 @Toque.started -= instance.OnToque;
                 @Toque.performed -= instance.OnToque;
                 @Toque.canceled -= instance.OnToque;
-                @PositionToque.started -= instance.OnPositionToque;
-                @PositionToque.performed -= instance.OnPositionToque;
-                @PositionToque.canceled -= instance.OnPositionToque;
+                @PosicionToque.started -= instance.OnPosicionToque;
+                @PosicionToque.performed -= instance.OnPosicionToque;
+                @PosicionToque.canceled -= instance.OnPosicionToque;
             }
 
             public void RemoveCallbacks(IToquesActions instance)
@@ -1287,7 +1287,7 @@ namespace UnityEngine.InputSystem
         public interface IToquesActions
         {
             void OnToque(InputAction.CallbackContext context);
-            void OnPositionToque(InputAction.CallbackContext context);
+            void OnPosicionToque(InputAction.CallbackContext context);
         }
     }
 }
