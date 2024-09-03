@@ -11,5 +11,9 @@ public class Enemigo : EnemigoBase
         _dano = 10;
     }
 
-   
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+        ReferenciaAdminJuego.enemigosBaseDerrotado++;
+    }
 }
