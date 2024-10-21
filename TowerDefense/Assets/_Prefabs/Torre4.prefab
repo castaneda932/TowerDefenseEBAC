@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 128840525923510878}
+  - component: {fileID: 6265489711067605058}
   m_Layer: 0
   m_Name: Torre4
   m_TagString: Untagged
@@ -34,6 +35,23 @@ Transform:
   - {fileID: 7850343317643992419}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6265489711067605058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617697875075332210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f16c8dc3e14c4449d1398c21a3c091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemigo: {fileID: 0}
+  prefabBala: {fileID: 5199011177836549654, guid: bf3ea9ba71a9b7e4ea0fe1f0f8acc2e0, type: 3}
+  puntasCanon:
+  - {fileID: 1511160616074062548}
+  - {fileID: 2452102148437318492}
 --- !u!1 &635541001081143084
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +726,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1511160616074062548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132129079817015915}
+  m_Layer: 0
+  m_Name: Punta1
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &132129079817015915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511160616074062548}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.38226312, y: 0.485994, z: 0.009289231, w: 0.78587437}
+  m_LocalPosition: {x: -0.01, y: 1.2, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8365978190394984497}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1578119252543594141
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +790,8 @@ Transform:
   m_LocalPosition: {x: 0.5499996, y: 1.3699999, z: -1.1999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6749246595660934474}
   m_Father: {fileID: 7850343317643992419}
   m_LocalEulerAnglesHint: {x: 36.284, y: -247.608, z: -28.623}
 --- !u!114 &4114187008986792641
@@ -1603,6 +1653,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &2452102148437318492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6749246595660934474}
+  m_Layer: 0
+  m_Name: Punta2
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6749246595660934474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2452102148437318492}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.004, y: 1.133, z: 0.034}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3201551157080619267}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6606865054630837267
 GameObject:
   m_ObjectHideFlags: 0
@@ -36407,7 +36488,8 @@ Transform:
   m_LocalPosition: {x: -0.36000118, y: 1.3699999, z: 1.7699994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 132129079817015915}
   m_Father: {fileID: 7850343317643992419}
   m_LocalEulerAnglesHint: {x: 36.284, y: -56.583, z: -28.623}
 --- !u!114 &5533450526161958804

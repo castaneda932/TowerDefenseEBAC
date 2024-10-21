@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 3061636356460273864}
   m_Layer: 0
   m_Name: zombieBoss
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,7 +393,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objetivo: {fileID: 3208661170970654362, guid: 344d0c700f2da8e45acf7deb48a2c862, type: 3}
   vida: 100
-  anim: {fileID: 0}
+  _dano: 5
+  recursosGanados: 200
+  ReferenciaAdminJuego: {fileID: 0}
+  referenciaSpawner: {fileID: 0}
+  anim: {fileID: 5000612991888494015}
 --- !u!195 &6426447817538892430
 NavMeshAgent:
   m_ObjectHideFlags: 0

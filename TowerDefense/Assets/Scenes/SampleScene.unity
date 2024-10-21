@@ -493,13 +493,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139813911}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.37943897, y: -0.0062944167, z: 0.0038843763, w: -0.92518723}
+  m_LocalRotation: {x: -0.3705463, y: -0.0062568667, z: 0.003944584, w: -0.92878455}
   m_LocalPosition: {x: -36.7, y: 29.3, z: -88.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 44.6, y: -359.3, z: -0.194}
+  m_LocalEulerAnglesHint: {x: 43.501, y: -359.313, z: -0.213}
 --- !u!1 &155817620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8483133434596007899, guid: 344d0c700f2da8e45acf7deb48a2c862, type: 3}
   m_PrefabInstance: {fileID: 1655812987}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 944516308}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9897d216b448c7045b1dfe7c26ed0174, type: 3}
@@ -2598,6 +2598,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937249947}
   m_CullTransparentMesh: 1
+--- !u!1 &944516308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3208661170970654362, guid: 344d0c700f2da8e45acf7deb48a2c862, type: 3}
+  m_PrefabInstance: {fileID: 1655812987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &945365720
 GameObject:
   m_ObjectHideFlags: 0
@@ -3823,7 +3828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemigosBaseDerrotado: 0
   enemigosJefeDerrotado: 0
-  recursos: 0
+  recursos: 800
 --- !u!4 &1394677632
 Transform:
   m_ObjectHideFlags: 0
@@ -8379,18 +8384,11 @@ MonoBehaviour:
   - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
   - {fileID: 1787440308669779327, guid: 330b2f1b0fbd11b4cb14613a637bfc51, type: 3}
   - {fileID: 4967355436628401866, guid: 36a0d5ab404de0a408231831512017b7, type: 3}
-  - {fileID: 4967355436628401866, guid: 36a0d5ab404de0a408231831512017b7, type: 3}
-  - {fileID: 4967355436628401866, guid: 36a0d5ab404de0a408231831512017b7, type: 3}
-  - {fileID: 4967355436628401866, guid: 36a0d5ab404de0a408231831512017b7, type: 3}
-  - {fileID: 4967355436628401866, guid: 36a0d5ab404de0a408231831512017b7, type: 3}
-  - {fileID: 4967355436628401866, guid: 36a0d5ab404de0a408231831512017b7, type: 3}
-  - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
-  - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
-  - {fileID: 1787440308669779327, guid: 330b2f1b0fbd11b4cb14613a637bfc51, type: 3}
-  oleada: 0
-  enemigosPorOleada: 03000000
+  oleada: 1
+  enemigosPorOleada: 03000000030000000300000003000000030000000300000003000000030000000300000003000000
   laOleadaHaIniciado: 0
-  EnemigosGenerados: []
+  EnemigosGenerados:
+  - {fileID: 0}
 --- !u!1001 &1861860696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8762,6 +8760,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenciaAdminToques: {fileID: 1251609734}
+  referenciaAdminJuego: {fileID: 1394677631}
+  referenciaSpawner: {fileID: 1851239516}
+  Objetivo: {fileID: 944516308}
   torreSeleccionada: 0
   prefabsTorres:
   - {fileID: 1607900019282457029, guid: f5f3e51a5f39aea4f9ace4d919cfc554, type: 3}
@@ -8769,6 +8770,7 @@ MonoBehaviour:
   - {fileID: 2578508099826825135, guid: 3eba75f4d50277d448ff309ed778a29a, type: 3}
   - {fileID: 617697875075332210, guid: a881c6db435bcba47952fff83906d36c, type: 3}
   - {fileID: 4961484982888056471, guid: de772a31755e5ef439d43b20127189f0, type: 3}
+  torresInstanciadas: []
 --- !u!1 &1991357970
 GameObject:
   m_ObjectHideFlags: 0
@@ -9045,7 +9047,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2024477394}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1851239516}
+        m_TargetAssemblyTypeName: SpawnerEnemigos, Assembly-CSharp
+        m_MethodName: EmpezarOla
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1476164355}
+        m_TargetAssemblyTypeName: AdministradorUI, Assembly-CSharp
+        m_MethodName: OcultarMenuOlaGanada
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1394677631}
+        m_TargetAssemblyTypeName: AdminJuego, Assembly-CSharp
+        m_MethodName: ResetValores
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2024477394
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -114,6 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6950555181719941087}
+  - component: {fileID: 1465846138990443810}
   m_Layer: 0
   m_Name: Torre1
   m_TagString: Untagged
@@ -139,6 +140,22 @@ Transform:
   - {fileID: 7754216852997161892}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1465846138990443810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607900019282457029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f16c8dc3e14c4449d1398c21a3c091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemigo: {fileID: 0}
+  prefabBala: {fileID: 5199011177836549654, guid: bf3ea9ba71a9b7e4ea0fe1f0f8acc2e0, type: 3}
+  puntasCanon:
+  - {fileID: 7754604142771238436}
 --- !u!1 &2534371684996565671
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +473,37 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &7754604142771238436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3731250470784900654}
+  m_Layer: 0
+  m_Name: PuntaCanon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3731250470784900654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754604142771238436}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000000029802322, y: 0.7071068, z: -0.000000029802322, w: 0.7071068}
+  m_LocalPosition: {x: 3.514288, y: 1.69, z: 0.05714247}
+  m_LocalScale: {x: 1.4285712, y: 1, z: 1.4285712}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7754216852997161892}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8425851544852058460
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +536,7 @@ Transform:
   m_LocalScale: {x: 0.6999999, y: 1, z: 0.6999999}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3731250470784900654}
   - {fileID: 681820707619074042}
   - {fileID: 3896524272319128625}
   m_Father: {fileID: 6950555181719941087}

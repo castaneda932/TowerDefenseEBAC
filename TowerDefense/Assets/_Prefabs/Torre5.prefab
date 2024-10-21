@@ -2022,6 +2022,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &3867050508458921175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6873494059375813827}
+  m_Layer: 0
+  m_Name: Punta
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6873494059375813827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867050508458921175}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.08931639, y: -0, z: -0, w: 0.9960033}
+  m_LocalPosition: {x: 0.03, y: 1.19, z: 0.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1453973498864558249}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4003263567772867425
 GameObject:
   m_ObjectHideFlags: 0
@@ -36129,6 +36160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2222598211355513972}
+  - component: {fileID: 3471679797525677226}
   m_Layer: 0
   m_Name: Torre5
   m_TagString: Untagged
@@ -36154,6 +36186,22 @@ Transform:
   - {fileID: 5707182506860680248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3471679797525677226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4961484982888056471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f16c8dc3e14c4449d1398c21a3c091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemigo: {fileID: 0}
+  prefabBala: {fileID: 5199011177836549654, guid: bf3ea9ba71a9b7e4ea0fe1f0f8acc2e0, type: 3}
+  puntasCanon:
+  - {fileID: 3867050508458921175}
 --- !u!1 &5605876511888197621
 GameObject:
   m_ObjectHideFlags: 0
@@ -36187,7 +36235,8 @@ Transform:
   m_LocalPosition: {x: -0.020000458, y: 5.73, z: 0.009925842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6873494059375813827}
   m_Father: {fileID: 5707182506860680248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3878121218066927891

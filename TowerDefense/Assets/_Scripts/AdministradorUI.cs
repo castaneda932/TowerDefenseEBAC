@@ -21,7 +21,7 @@ public class AdministradorUI : MonoBehaviour
 
 
 
-    private void OnEnable()
+    public void OnEnable()
     {
         refernciaObjetivo.EnObjetivoDestruido += MostrarMenuGameOver;
         referenciaSpawner.EnOleadaIniciada += ActualizarOla;
@@ -31,22 +31,22 @@ public class AdministradorUI : MonoBehaviour
 
     }
 
-    private void ActualizarRecursos()
+    public void ActualizarRecursos()
     {
         textoRecursos.text = $"Recursos: {referenciaAdminJuego.recursos}";
     }
 
-    private void MostrarMensajeUltimoEnemigo()
+    public void MostrarMensajeUltimoEnemigo()
     {
         mensajeFinOla.SetActive(true);
         Invoke("OcultarMensajeUltimoEnemigo", 3);
     }
-    private void OcultarMensajeUltimoEnemigo()
+    public void OcultarMensajeUltimoEnemigo()
     {
         mensajeFinOla.SetActive(false);
     }
 
-    private void MostrarMenuOlaGanada()
+    public void MostrarMenuOlaGanada()
     {
         textoEnemigos.text = $"Enemigos: \t {referenciaAdminJuego.enemigosBaseDerrotado}";
         textoJefes.text = $"Jefes: \t\t {referenciaAdminJuego.enemigosJefeDerrotado}";
@@ -54,18 +54,18 @@ public class AdministradorUI : MonoBehaviour
 
     }
 
-    private void OcultarMenuOlaGanada()
+    public void OcultarMenuOlaGanada()
     {
         menuOlaGanada.SetActive(false);
     }
 
-    private void ActualizarOla()
+    public void ActualizarOla()
     {
         textoOleada.text = $"Ola: {referenciaSpawner.oleada}";
         OcultarMenuOlaGanada();
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         refernciaObjetivo.EnObjetivoDestruido -= MostrarMenuGameOver;
         referenciaSpawner.EnOleadaIniciada -= ActualizarOla;
