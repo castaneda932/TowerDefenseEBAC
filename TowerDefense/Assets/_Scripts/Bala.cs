@@ -30,6 +30,7 @@ public class Bala : MonoBehaviour, IAtacante
     {
         if(collision.gameObject.tag =="Enemigo")
         {
+            enemigo = collision.gameObject;
             Danar(_dano);
             Destroy(gameObject);
         }

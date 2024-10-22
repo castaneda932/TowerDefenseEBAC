@@ -25,6 +25,8 @@ public class SpawnerEnemigos : MonoBehaviour
     void Start()
     {
         oleada = 0;
+        ConfigurarCantidadDeEnemigos();
+        InstanciarEnemigo();
         
     }
     private void FixedUpdate()
