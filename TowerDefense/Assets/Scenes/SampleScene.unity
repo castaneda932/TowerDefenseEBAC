@@ -3828,7 +3828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemigosBaseDerrotado: 0
   enemigosJefeDerrotado: 0
-  recursos: 800
+  recursos: 3800
 --- !u!4 &1394677632
 Transform:
   m_ObjectHideFlags: 0
@@ -8347,7 +8347,7 @@ GameObject:
   - component: {fileID: 1851239515}
   - component: {fileID: 1851239516}
   m_Layer: 0
-  m_Name: SpawnEnemigo
+  m_Name: SpawnerEnemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8382,17 +8382,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabsEnemigos:
   - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
-  - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
-  - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
-  - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
-  - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
-  - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
   - {fileID: 4967355436628401866, guid: 36a0d5ab404de0a408231831512017b7, type: 3}
   - {fileID: 4967355436628401866, guid: 36a0d5ab404de0a408231831512017b7, type: 3}
-  - {fileID: 1787440308669779327, guid: 330b2f1b0fbd11b4cb14613a637bfc51, type: 3}
+  - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
   - {fileID: 1787440308669779327, guid: 330b2f1b0fbd11b4cb14613a637bfc51, type: 3}
   oleada: 0
-  enemigosPorOleada: 14000000
+  enemigosPorOleada: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   laOleadaHaIniciado: 0
   EnemigosGenerados: []
 --- !u!1001 &1861860696
