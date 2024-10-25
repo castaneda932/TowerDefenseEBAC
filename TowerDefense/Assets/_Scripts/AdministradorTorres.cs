@@ -9,6 +9,7 @@ public class AdministradorTorres : MonoBehaviour
     public AdminJuego referenciaAdminJuego; //referencia al administrador del juego
     public SpawnerEnemigos referenciaSpawner; // para validar que el juego ya se inicio
     public GameObject Objetivo; //para calcular la distancia entre el objetivo y los enemigos.
+
     public enum TorreSeleccionada// agregar las torres que tengamos
     {
         torre1, torre2, torre3, torre4, torre5
@@ -37,18 +38,7 @@ public class AdministradorTorres : MonoBehaviour
 
     }
 
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     private void ActualizarObjetivo()
     {
@@ -78,7 +68,7 @@ public class AdministradorTorres : MonoBehaviour
                 }
             }
         }
-        Invoke("ActualizarObjetivo", 3);
+        Invoke("ActualizarObjetivo", 1);
     }
 
     private void CrearTorre(GameObject plataforma)
@@ -88,17 +78,22 @@ public class AdministradorTorres : MonoBehaviour
             TorreSeleccionada.torre1 => 400,
             TorreSeleccionada.torre2 => 600,
             TorreSeleccionada.torre3 => 800,
+            TorreSeleccionada.torre4 =>1000,
+            TorreSeleccionada.torre5 => 1200,
             _ => 0
         };
-        if (plataforma.transform.childCount == 0 && referenciaAdminJuego.recursos>= costo)// en caso de que no exista una torre en la plataforma ahora instanciar la torre
+        if (plataforma.transform.childCount == 0 && referenciaAdminJuego.recursos >= costo)// en caso de que no exista una torre en la plataforma ahora instanciar la torre
         {
             referenciaAdminJuego.ModificarRecursos(-costo);
+
             Debug.Log("creando torre"); // mandar mensaje a la consola
             int indiceTorre = (int)torreSeleccionada;
             Vector3 posParaInstanciar = plataforma.transform.position; //instanciar en la plataforma seleccionada
             posParaInstanciar.y += 0.5f;//altura para instanciar la torre
             GameObject torreInstancida = Instantiate<GameObject>(prefabsTorres[indiceTorre], posParaInstanciar, Quaternion.identity);
             torreInstancida.transform.SetParent(plataforma.transform);
+
+            torresInstanciadas.Add(torreInstancida);
         }
     }
 
