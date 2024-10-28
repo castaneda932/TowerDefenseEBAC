@@ -73,7 +73,7 @@ public class TorreAntena : TorreBase, IAtacante
             }
             else
             {
-                punto.x = Random.value * 2;
+                punto.x  -= Random.value * 2;
                 esPositivo= true;
             }
             puntosTemporales.Add(punto);

@@ -8347,7 +8347,7 @@ GameObject:
   - component: {fileID: 1851239515}
   - component: {fileID: 1851239516}
   m_Layer: 0
-  m_Name: SpawnerEnemigo
+  m_Name: SpawnerEnemigos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8403,8 +8403,8 @@ MonoBehaviour:
   - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
   - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
   - {fileID: 8101914692720470177, guid: bc9a6fe14316e534ab9f8d8021a08c74, type: 3}
-  oleada: 0
-  enemigosPorOleada: 0000000015000000190000001e000000
+  oleada: 1
+  enemigosPorOleada: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   laOleadaHaIniciado: 0
   EnemigosGenerados: []
 --- !u!1001 &1861860696
