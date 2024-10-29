@@ -2082,7 +2082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4003263567772867425}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.088019475, y: 0.108744815, z: -0.15152699, w: 0.97850233}
+  m_LocalRotation: {x: 0.11489798, y: 0.07982112, z: -0.4188914, w: 0.89719397}
   m_LocalPosition: {x: 0, y: 2.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2091,7 +2091,7 @@ Transform:
   - {fileID: 1453973498864558249}
   - {fileID: 1049761587207152700}
   m_Father: {fileID: 2222598211355513972}
-  m_LocalEulerAnglesHint: {x: 11.842, y: 10.964, z: -16.465}
+  m_LocalEulerAnglesHint: {x: 15.846, y: 2.799, z: -49.665}
 --- !u!114 &4725236956920587514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36160,7 +36160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2222598211355513972}
-  - component: {fileID: 8820647614931440303}
+  - component: {fileID: -5043885299412635882}
   m_Layer: 0
   m_Name: Torre5
   m_TagString: Untagged
@@ -36186,7 +36186,7 @@ Transform:
   - {fileID: 5707182506860680248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8820647614931440303
+--- !u!114 &-5043885299412635882
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

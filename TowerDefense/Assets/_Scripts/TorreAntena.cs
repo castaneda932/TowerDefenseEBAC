@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TorreAntena : TorreBase, IAtacante
+public class TorreAntena : TorreBase
 {
     public float divisionesRayo;
     public LineRenderer lRRayo;
